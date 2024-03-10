@@ -14,8 +14,6 @@ LAlt Up::
     Send("{CtrlUp}")
 }
 
-<#Tab::AltTab
-
 HotIf (*) => IsKeyboardNavigationLayer
 {
     Hotkey "*i", (*) => Send("{Blind}{Up}")

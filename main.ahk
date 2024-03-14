@@ -20,12 +20,10 @@ HotIf (*) => IsKeyboardNavigationLayer
     Hotkey "*j", (*) => Send("{Blind}{Left}")
     Hotkey "*k", (*) => Send("{Blind}{Down}")
     Hotkey "*l", (*) => Send("{Blind}{Right}")
-    Hotkey "*u", (*) => Send("{Blind}{Home}")
+    Hotkey "*u", (*) => Send("{Blind}{WheelUp 5}")
+    Hotkey "*o", (*) => Send("{Blind}{WheelDown 5}")
+    Hotkey "*y", (*) => Send("{Blind}{Home}")
     Hotkey "*o", (*) => Send("{Blind}{End}")
-    ; Hotkey "*y", (*) => Send("{Blind}{PgUp}")
-    ; Hotkey "*n", (*) => Send("{Blind}{PgDn}")
-    Hotkey "*y", (*) => Send("{Blind}{WheelUp 5}")
-    Hotkey "*n", (*) => Send("{Blind}{WheelDown 5}")
     Hotkey "*a", (*) => Send("{Blind}{AltDown}")
     Hotkey "*a Up", (*) => Send("{Blind}{AltUp}")
     Hotkey "*s", (*) => Send("{Blind}{LWinDown}")
@@ -48,7 +46,7 @@ HotIf (*) => IsKeyboardNavigationLayer
     Hotkey "*w", (*) => Send("{CtrlDown}{s}{CtrlUp}")
     Hotkey "*e", (*) => Send("{CtrlDown}{d}{CtrlUp}")
     Hotkey "*F4", (*) => Send("{Blind}{AltDown}{F4}{AltUp}")
-    *Tab:: Send "{Blind}{Alt down}{tab}"
+    ; *Tab:: Send "{Blind}{Alt down}{tab}"
 }
 
 

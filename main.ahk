@@ -23,7 +23,7 @@ HotIf (*) => IsKeyboardNavigationLayer
     Hotkey "*u", (*) => Send("{Blind}{WheelUp 5}")
     Hotkey "*o", (*) => Send("{Blind}{WheelDown 5}")
     Hotkey "*y", (*) => Send("{Blind}{Home}")
-    Hotkey "*o", (*) => Send("{Blind}{End}")
+    Hotkey "*p", (*) => Send("{Blind}{End}")
     Hotkey "*a", (*) => Send("{Blind}{AltDown}")
     Hotkey "*a Up", (*) => Send("{Blind}{AltUp}")
     Hotkey "*s", (*) => Send("{Blind}{LWinDown}")
@@ -40,6 +40,7 @@ HotIf (*) => IsKeyboardNavigationLayer
     Hotkey "*x", (*) => Send("{CtrlDown}{x}{CtrlUp}")
     Hotkey "*c", (*) => Send("{CtrlDown}{c}{CtrlUp}")
     Hotkey "*v", (*) => Send("{CtrlDown}{v}{CtrlUp}")
+    Hotkey "*m", (*) => Send("{Blind}{F12}")
     Hotkey "*;", (*) => Send("{Blind}{Enter}")
     Hotkey "*h", (*) => Send("{Blind}{Backspace}")
     Hotkey "*'", (*) => Send("{Blind}{Del}")
@@ -73,7 +74,7 @@ SpaceUp(InputHookObj, VK, SC)
     global IsSymbolsLayer := false
 }
 
-ih.Start()
+; ih.Start()
 
 HotIf (*) => IsSymbolsLayer
 {

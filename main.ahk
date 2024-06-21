@@ -198,3 +198,54 @@ MoveCursor() {
     RestoreDPI := DllCall("SetThreadDpiAwarenessContext", "ptr", -3, "ptr") ; enable per-monitor DPI awareness
     MouseMove(VELOCITY_X, VELOCITY_Y, 0, "R")
 }
+
+
+/******* Display layer and modificator key as mouse tooltip *******/
+ShowDebugTooltip() {
+    text := ""
+    
+    if (IsKeyboardNavigationLayer) {
+        text .= "KeyboardNavigationLayer`n"
+    }
+    if (IsSymbolsLayer) {
+        text .= "SymbolsLayer`n"
+    }
+    if (IsMouseNavigationLayer) {
+        text .= "MouseNavigationLayer`n"
+    }
+
+    ; Sprawdzenie statusu klawiszy modyfikujących
+    if GetKeyState("LShift", "P") {
+        text .= "Left Shift`n"
+    }
+    if GetKeyState("RShift", "P") {
+        text .= "Right Shift`n"
+    }
+    if GetKeyState("LAlt", "P") {
+        text .= "Left Alt`n"
+    }
+    if GetKeyState("RAlt", "P") {
+        text .= "Right Alt`n"
+    }
+    if GetKeyState("LCtrl", "P") {
+        text .= "Left Ctrl`n"
+    }
+    if GetKeyState("RCtrl", "P") {
+        text .= "Right Ctrl`n"
+    }
+    if GetKeyState("LWin", "P") {
+        text .= "Left Win`n"
+    }
+    if GetKeyState("RWin", "P") {
+        text .= "Right Win`n"
+    }
+    
+    if (text != "") {
+        MouseGetPos(&MouseX, &MouseY)
+        ToolTip(text, MouseX + 10, MouseY + 10)
+    } else {
+        ToolTip("")
+    }
+}
+
+SetTimer(ShowDebugTooltip, 100)

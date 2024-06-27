@@ -42,6 +42,7 @@ HotIf (*) => IsKeyboardNavigationLayer
     Hotkey "*v", (*) => Send("{CtrlDown}{v}{CtrlUp}")
     Hotkey "*m", (*) => Send("{Blind}{F12}")
     Hotkey "*n", (*) => Send("{CtrlDown}{NumpadDiv}{CtrlUp}")
+    Hotkey "*m", (*) => Send("{Blind}{F12}")
     Hotkey "*;", (*) => Send("{Blind}{Enter}")
     Hotkey "*h", (*) => Send("{Blind}{Backspace}")
     Hotkey "*'", (*) => Send("{Blind}{Del}")
